@@ -1,0 +1,13 @@
+#!/bin/bash
+clear
+echo 'Running apt update' && sleep 1
+sudo apt update
+sudo apt dist-upgrade -y
+clear
+echo 'Running snap refresh' && sleep 1
+snap refresh
+clear
+echo 'Running flatpak update' && sleep 1
+flatpak update -y
+
+exit $?
